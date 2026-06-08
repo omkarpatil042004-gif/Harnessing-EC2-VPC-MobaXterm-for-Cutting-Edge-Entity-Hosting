@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>anyTool | All Your Media Tools in One Place</title>
+  <meta name="description" content="anyTool is a modern white and blue SaaS utility platform for image crop, resize, compression, format conversion, and browser-based video to MP3 conversion.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="anyTool home">
+        <span class="brand-mark">aT</span>
+        <span>anyTool</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#tools">Tools</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Clean media tools for everyday files</p>
+          <h1>anyTool</h1>
+          <p>
+            All Your Media Tools in One Place. Crop images, resize files, compress media, convert formats, upload videos, and export MP3 audio in one clean SaaS-style workspace.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#tools">Upload File</a>
+            <a class="btn ghost" href="#tools">View Tools</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img src="images/snaptools-dashboard.png" alt="anyTool dashboard preview with image and video utility cards">
+        </div>
+      </div>
+    </section>
+
+    <section class="section features-section">
+      <div class="section-heading center">
+        <p class="eyebrow">Features</p>
+        <h2>A polished utility experience for images and videos</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon">C</span>
+          <h3>Manual Crop</h3>
+          <p>Upload an image and position a visible crop box directly over the preview.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">R</span>
+          <h3>Resize Controls</h3>
+          <p>Set width, height, and aspect ratio preferences before processing.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">P</span>
+          <h3>PNG and JPG</h3>
+          <p>Use clean conversion actions for PNG to JPG and JPG to PNG workflows.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">A</span>
+          <h3>Video to MP3</h3>
+          <p>Upload video files and convert their audio into downloadable MP3 files in your browser.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section tools-section" id="tools">
+      <div class="section-heading">
+        <p class="eyebrow">Tools</p>
+        <h2>Simple tools for everyday media tasks</h2>
+        <p>Upload a file, choose what you want to change, and download the result. Each tool is designed to be clear even if you have never edited media before.</p>
+      </div>
+
+      <div class="tool-steps" aria-label="How anyTool works">
+        <article>
+          <span>1</span>
+          <div>
+            <strong>Upload File</strong>
+            <p>Choose an image or video from your device.</p>
+          </div>
+        </article>
+        <article>
+          <span>2</span>
+          <div>
+            <strong>Edit or Convert</strong>
+            <p>Crop, resize, compress, or extract audio.</p>
+          </div>
+        </article>
+        <article>
+          <span>3</span>
+          <div>
+            <strong>Download Result</strong>
+            <p>Save your finished file when it is ready.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="workspace">
+        <article class="tool-card crop-card">
+          <div class="card-title">
+            <span class="tool-badge">Crop</span>
+            <div>
+              <h3>Crop an Image</h3>
+              <p>Remove extra space and focus on the most important part of your photo.</p>
+            </div>
+          </div>
+
+          <label class="drop-zone" for="imageUpload" data-drop-zone="image">
+            <input type="file" id="imageUpload" accept="image/*">
+            <span class="upload-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M16 16l-4-4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 12v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M20 17.4A5.5 5.5 0 0 0 17.2 7a6.5 6.5 0 0 0-12.1 2.2A4.3 4.3 0 0 0 6.2 18H7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <strong>Drop your image here</strong>
+            <em>Click to Upload</em>
+            <small>Works with PNG, JPG, JPEG, and WEBP files.</small>
+          </label>
+
+          <div class="preview-shell" id="previewShell">
+            <img id="imagePreview" alt="Uploaded image preview">
+            <div class="crop-box" id="cropBox" aria-label="Manual crop box">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <p id="imagePlaceholder">
+              <span class="preview-illustration" aria-hidden="true"></span>
+              <strong>Your image preview will appear here</strong>
+              <small>After uploading, drag the crop box to choose the area you want to keep.</small>
+            </p>
+          </div>
+
+          <div class="button-row">
+            <button class="btn primary" type="button" id="cropButton">Crop Image</button>
+            <button class="btn light" type="button" id="downloadImageButton" disabled>Download Cropped Image</button>
+            <button class="btn light" type="button" id="resetImageButton" disabled>Remove Image</button>
+          </div>
+          <p class="status-text" id="imageStatus" aria-live="polite"></p>
+        </article>
+
+        <article class="tool-card">
+          <div class="card-title">
+            <span class="tool-badge">Resize</span>
+            <div>
+              <h3>Resize an Image</h3>
+              <p>Resize images for social media, websites, profile photos, and sharing.</p>
+            </div>
+          </div>
+
+          <div class="input-grid">
+            <label>
+              Width
+              <input type="number" id="resizeWidth" min="1" placeholder="1200">
+            </label>
+            <label>
+              Height
+              <input type="number" id="resizeHeight" min="1" placeholder="800">
+            </label>
+          </div>
+
+          <label class="check-line">
+            <input type="checkbox" id="keepRatio" checked>
+            Keep aspect ratio
+          </label>
+
+          <button class="btn primary full" type="button" id="resizeButton">Resize Image</button>
+          <button class="btn light full" type="button" id="downloadResizeButton" disabled>Download Resized Image</button>
+          <p class="status-text" id="resizeStatus" aria-live="polite"></p>
+        </article>
+
+        <article class="tool-card">
+          <div class="card-title">
+            <span class="tool-badge">Compress</span>
+            <div>
+              <h3>Compress an Image</h3>
+              <p>Make image files smaller so they upload faster and are easier to share.</p>
+            </div>
+          </div>
+
+          <label class="range-label" for="qualityRange">
+            Quality
+            <span id="qualityValue">72%</span>
+          </label>
+          <input class="range" type="range" id="qualityRange" min="10" max="100" value="72">
+
+          <button class="btn primary full" type="button" id="compressButton">Reduce File Size</button>
+          <button class="btn light full" type="button" id="downloadCompressButton" disabled>Download Compressed Image</button>
+          <div class="format-actions">
+            <button class="mini-btn" type="button" id="pngToJpgButton">Convert PNG to JPG</button>
+            <button class="mini-btn" type="button" id="jpgToPngButton">Convert JPG to PNG</button>
+          </div>
+          <p class="status-text" id="compressStatus" aria-live="polite"></p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section video-audio-section" id="video-audio">
+      <div class="section-heading center">
+        <p class="eyebrow">Video & Audio Tools</p>
+        <h2>Video & Audio Tools</h2>
+        <p>Convert and extract audio from video files easily.</p>
+      </div>
+
+      <article class="video-tool-card">
+        <div class="waveform-bg" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="video-tool-copy">
+          <span class="audio-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M9 18V5l11-2v13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 18a3 3 0 1 1-3-3 3 3 0 0 1 3 3Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M20 16a3 3 0 1 1-3-3 3 3 0 0 1 3 3Z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </span>
+          <div>
+            <span class="video-tool-label">Audio extraction</span>
+            <h3>Video to MP3</h3>
+            <p>Upload video files and extract their audio into downloadable MP3 files.</p>
+          </div>
+        </div>
+
+        <label class="drop-zone video-drop-zone" for="videoUpload" data-drop-zone="video">
+          <input type="file" id="videoUpload" accept=".mp4,.mov,.webm,video/mp4,video/quicktime,video/webm">
+          <span class="upload-symbol audio-upload-symbol" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 18V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="m8 13 4-4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6.5 18.5a5.8 5.8 0 0 1 .7-11.56A6.7 6.7 0 0 1 19.6 9.4a4.7 4.7 0 0 1-1.7 9.1H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <strong>Drop your video here</strong>
+          <em>Click to Upload</em>
+          <small>Upload MP4, MOV, or WEBM files</small>
+        </label>
+
+        <div class="video-actions">
+          <button class="btn primary full" type="button" id="convertButton" disabled>Extract MP3 Audio</button>
+        </div>
+        <p class="status-text muted" id="videoStatus" aria-live="polite"></p>
+      </article>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Powerful Tools for Everyday Media Editing</h2>
+        <p>
+          anyTool is a modern white and blue SaaS utility platform for creators, students, teams, and everyday users who need fast media editing without complex software. It brings practical image and video tools together in a simple, responsive workspace.
+        </p>
+      </div>
+      <div class="stack-grid">
+        <span>Image Crop</span>
+        <span>Resize Image</span>
+        <span>Compress Image</span>
+        <span>Video & Audio</span>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2>Get in Touch with anyTool</h2>
+        <p>Have a question, partnership idea, or product suggestion? Connect with us and we will help you move faster with clean, reliable media tools.</p>
+        <article class="contact-card">
+          <div class="contact-avatar" aria-hidden="true">PS</div>
+          <div class="contact-profile">
+            <span class="contact-label">Direct contact</span>
+            <h3>Omkar Mahesh Patil</h3>
+            <div class="contact-list">
+              <a href="tel:8010875040">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.91.33 1.8.63 2.65a2 2 0 0 1-.45 2.11L8.02 9.75a16 16 0 0 0 6.23 6.23l1.27-1.27a2 2 0 0 1 2.11-.45c.85.3 1.74.51 2.65.63A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span>
+                  <strong>Mobile</strong>
+                  8010875040
+                </span>
+              </a>
+              <a href="mailto:omkarpatil042004@gmail.com">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="m22 7-10 7L2 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span>
+                  <strong>Email</strong>
+                  omkarpatil042004@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <form class="contact-form" action="https://formsubmit.co/omkarpatil042004@gmail.com" method="POST">
+        <div class="form-heading">
+          <span>Message us</span>
+          <h3>Send a quick note</h3>
+          <p>Share a few details and we will get back to you shortly.</p>
+        </div>
+        <input type="hidden" name="_subject" value="New anyTool contact message">
+        <input type="hidden" name="_captcha" value="false">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          Message
+          <textarea rows="5" name="message" placeholder="Tell us what you need" required></textarea>
+        </label>
+        <button class="btn primary contact-submit" type="submit" id="contactButton">Send Message</button>
+        <p class="status-text" id="contactStatus" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p>anyTool</p>
+      <span>Modern media utilities for fast everyday workflows.</span>
+    </div>
+    <p>© 2026 anyTool. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

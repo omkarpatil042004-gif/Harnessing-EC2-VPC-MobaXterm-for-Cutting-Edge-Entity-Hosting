@@ -1,0 +1,40 @@
+# anyTool Requirements
+
+# Server
+Apache2
+Ubuntu Linux
+AWS EC2
+
+# Frontend
+HTML5
+CSS3
+JavaScript
+
+# Optional Future Backend Tools
+ffmpeg
+nodejs
+npm
+
+
+# Setup Guide
+
+1. Install Apache2
+
+sudo apt update
+sudo apt install apache2 -y
+
+2. Move project files
+
+sudo cp -r * /var/www/html/
+
+3. Start Apache
+
+sudo systemctl start apache2
+
+4. Enable Apache
+
+sudo systemctl enable apache2
+
+5. Open website
+
+http://YOUR_PUBLIC_IP
